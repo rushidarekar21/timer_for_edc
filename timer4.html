@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/flipdown.css"> -->
+    <link rel="stylesheet" href="timer4.css">
+    
+</head>
+<body>
+  
+  <div class="sp-container">
+    <div class="sp-content">
+      <div class="sp-globe"></div>
+      <h2 class="frame-1">THE TIME</h2>
+      <h2 class="frame-2">HAS</h2>
+      <h2 class="frame-3">COME</h2>
+      <h2 class="frame-4">FOR VISHWAPRENEUR'24</h2>
+      <h2 class="frame-5">
+        <span>We Are</span>
+        <span> Launching  </span>
+        <span>Soon</span>
+      </h2>
+      
+    </div>
+  </div>
+
+
+
+
+  
+
+
+
+    <div class="countdown">
+      
+
+        <div class="time-section" id="days">
+            <div class="time-group">
+              <div class="time-segment">
+                <div class="segment-display">
+                  <div class="segment-display__top"></div>
+                  <div class="segment-display__bottom"></div>
+                  <div class="segment-overlay">
+                    <div class="segment-overlay__top"></div>
+                    <div class="segment-overlay__bottom"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="time-segment">
+                <div class="segment-display">
+                  <div class="segment-display__top"></div>
+                  <div class="segment-display__bottom"></div>
+                  <div class="segment-overlay">
+                    <div class="segment-overlay__top"></div>
+                    <div class="segment-overlay__bottom"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p>Days</p>
+          </div>
+
+          
+        <div class="time-section" id="hours">
+          <div class="time-group">
+            <div class="time-segment">
+              <div class="segment-display">
+                <div class="segment-display__top"></div>
+                <div class="segment-display__bottom"></div>
+                <div class="segment-overlay">
+                  <div class="segment-overlay__top"></div>
+                  <div class="segment-overlay__bottom">       </div>
+                </div>
+              </div>
+            </div>
+            <div class="time-segment">
+              <div class="segment-display">
+                <div class="segment-display__top"></div>
+                <div class="segment-display__bottom"></div>
+                <div class="segment-overlay">
+                  <div class="segment-overlay__top"></div>
+                  <div class="segment-overlay__bottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Hours</p>
+        </div>
+
+        
+          
+  
+        <div class="time-section" id="minutes">
+          <div class="time-group">
+            <div class="time-segment">
+              <div class="segment-display">
+                <div class="segment-display__top"></div>
+                <div class="segment-display__bottom"></div>
+                <div class="segment-overlay">
+                  <div class="segment-overlay__top"></div>
+                  <div class="segment-overlay__bottom"></div>
+                </div>
+              </div>
+            </div>
+            <div class="time-segment">
+              <div class="segment-display">
+                <div class="segment-display__top"></div>
+                <div class="segment-display__bottom"></div>
+                <div class="segment-overlay">
+                  <div class="segment-overlay__top"></div>
+                  <div class="segment-overlay__bottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Minutes</p>
+        </div>
+  
+        <div class="time-section" id="seconds">
+          <div class="time-group">
+            <div class="time-segment">
+              <div class="segment-display">
+                <div class="segment-display__top"></div>
+                <div class="segment-display__bottom"></div>
+                <div class="segment-overlay">
+                  <div class="segment-overlay__top"></div>
+                  <div class="segment-overlay__bottom"></div>
+                </div>
+              </div>
+            </div>
+            <div class="time-segment">
+              <div class="segment-display">
+                <div class="segment-display__top"></div>
+                <div class="segment-display__bottom"></div>
+                <div class="segment-overlay">
+                  <div class="segment-overlay__top"></div>
+                  <div class="segment-overlay__bottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Seconds</p>
+        </div>
+      </div>
+      <img src="rocket.png" class ="rocket" alt="">
+
+     
+
+      <audio controls autoplay >
+        <source src="clock3.mp3"  type="audio/mp3" autoplay>
+        <source src="clock2.mp3" type="audio/ogg">
+        
+      </audio>
+      
+      <script src="timer4.js"></script>
+      <script>
+        // Function to play sound
+        function playSound() {
+            var audio = document.querySelector('audio');
+            audio.play();
+            setTimeout(function () {
+                audio.pause();
+                audio.currentTime = 0;
+            }, 17000);
+        }
+        
+        
+
+        // Function to hide the countdown timer for 18 seconds
+        function hideTimer() {
+            document.querySelector('.countdown').style.display = 'none';
+
+            // Show the countdown timer after 18 seconds
+            setTimeout(function () {
+                document.querySelector('.countdown').style.display = 'flex';
+            }, 17000);
+        }
+
+        // Function to hide the rocket for 15 seconds
+        function hideRocket() {
+            document.querySelector('.rocket').style.display = 'none';
+
+            // Show the rocket after 15 seconds
+            setTimeout(function () {
+                document.querySelector('.rocket').style.display = 'block';
+            }, 15000);
+        }
+
+        // Call the hideTimer and hideRocket functions on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', function () {
+            hideTimer();
+            hideRocket();
+        });
+
+        // Add event listener to play sound on click anywhere on the screen
+        document.addEventListener('click', function () {
+            playSound();
+        });
+    </script>>
+
+   
+      
+
+
+</body>
+</html>
